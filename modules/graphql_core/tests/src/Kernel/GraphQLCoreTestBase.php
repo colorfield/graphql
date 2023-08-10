@@ -16,6 +16,7 @@ class GraphQLCoreTestBase extends GraphQLTestBase {
     'graphql_core',
     'path_alias',
     'user',
+    'install',
   ];
 
   /**
@@ -25,7 +26,7 @@ class GraphQLCoreTestBase extends GraphQLTestBase {
     parent::setUp();
     // User entity schema is required for the currentUserContext field.
     $this->installEntitySchema('user');
-    module_load_include('install', 'user', 'user');
+    \Drupal::moduleHandler()->loadInclude('install', 'user', 'user');
     user_install();
   }
 
