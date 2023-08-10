@@ -27,7 +27,7 @@ use GraphQL\Utils\Utils;
 use GraphQL\Validator\Rules\AbstractValidationRule;
 use GraphQL\Validator\ValidationContext;
 use GraphQL\Validator\Rules\QueryComplexity;
-use Drupal\Core\Http\RequestStack;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 // TODO: Refactor this and clean it up.
 class QueryProcessor {
